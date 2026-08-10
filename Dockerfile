@@ -21,6 +21,10 @@ FROM base as build
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libvips pkg-config
 
+# Install libyaml-dev
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y libyaml-dev
+
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install && \
@@ -54,9 +58,6 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
-# Install libyaml-dev
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y libyaml-dev
 
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
