@@ -54,6 +54,10 @@ RUN useradd rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
+# Install libyaml-dev
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y libyaml-dev
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
