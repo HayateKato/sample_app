@@ -83,6 +83,7 @@ GEM
       execjs (~> 2)
     backport (1.2.0)
     base64 (0.3.0)
+    bcrypt (3.1.18)
     benchmark (0.5.0)
     bigdecimal (4.1.2)
     bindex (0.8.1)
@@ -404,6 +405,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bcrypt (= 3.1.18)
   bootsnap (= 1.16.0)
   bootstrap-sass (= 3.4.1)
   capybara (= 3.38.0)
@@ -448,6 +450,7 @@ CHECKSUMS
   autoprefixer-rails (10.4.21.0) sha256=71b48caf850fc25275abd96f0b1fdd51c82e1c9b99cd30085cacb05da9c70235
   backport (1.2.0) sha256=912c7dfdd9ee4625d013ddfccb6205c3f92da69a8990f65c440e40f5b2fc7f75
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+  bcrypt (3.1.18) sha256=154de0b0b089e56d5980c5037ad85fc9554cfbf4996538673c1ddbc9b61b1f11
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
   bindex (0.8.1) sha256=7b1ecc9dc539ed8bccfc8cb4d2732046227b09d6f37582ff12e50a5047ceb17e
